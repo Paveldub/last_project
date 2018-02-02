@@ -1,0 +1,56 @@
+extends ../_template
+
+block variables
+    -var title = "My works"
+
+block content
+    .Background.visually-hidden    
+        canvas.Background-canvas
+    .wrapper.visually-hidden
+        .preloader#page-preloader
+            .loader
+            span#load-perc.loader-percentage(<='', span='') 0%
+        section.my-works#firstSection
+            +socials('header')
+            include ../layout/my-works/burger-menu
+            +herocenter('position', 'Pavel Demidovich', 'Personal website')
+            +background('changed', 'portfolio_header')
+            +arrow('position', '#anchor')
+            .triangle
+                +triangle('color-myworks')
+        .portfolio__my-works
+                include ../layout/my-works/titleandpic
+        section.works#anchor
+            .works__content
+                include ../layout/my-works/slider-left
+                include ../layout/my-works/slider-right
+        section.rumors
+            .rumors__leaf
+                include ../layout/my-works/leaves
+            .rumors__background
+                include ../layout/my-works/background
+            .rumors__title-pic 
+                include ../layout/my-works/title-form
+            .rumors__testimonials
+                include ../layout/my-works/testimonials
+            .rumors__form-wrapper
+                .rumors__form-blur
+                form.rumors__form-block(method="POST")
+                    +title-small('rumors__form-title', 'Get in touch')
+                    include ../layout/my-works/inputs
+                    +buttonsForm('button', 'form', 'form')
+            +arrow('up', '#firstSection', 'pozition')
+            footer.footer
+                include ../common/footer
+
+        .overlay#overlay
+            +nav('overlay', ["My works", "About", "Blog", "Log in"])
+            
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script(src="./assets/js/flexibility.js")
+    script(src="./assets/js/my-works.js")
+    script(src="./assets/js/anmtxt.js")
+    script(src="./assets/js/slider.js")
+    script(src="./assets/js/water.js")  
+
+    

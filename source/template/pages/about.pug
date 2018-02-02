@@ -1,0 +1,53 @@
+extends ../_template 
+
+block variables 
+    -var title = "About"
+
+block content
+    .preloader#page-preloader
+            .loader
+            span#load-perc.loader-percentage(<='', span='') 0%
+    .wrapper.visually-hidden
+        section.section
+            .container.container-about
+                .background-desert
+                +socials('header')
+                include ../layout/about/burger-menu
+                +background('center', 'portfolio_header')
+                +herocenter('center', 'Pavel Demidovich', 'Personal website')
+                .arrow-down
+                    include ../layout/about/arrow-down
+                .triangle
+                    include ../layout/about/triangle
+        section.about#anchor
+                include ../layout/about/about-left
+                .about__right
+                    +title-small('about__description', 'Work with')
+                    include ../layout/about/description
+                    .about__right-skills
+                        include ../layout/about/circles
+        section.map
+            .map__size#map
+            .contacts
+                include ../layout/about/contacts
+            footer.footer
+                include ../common/footer
+        .overlay#overlay
+            +nav('overlay', ["My works", "About", "Blog", "Log in"])
+            
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")  
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA5vpGd6DZ4gnMIapvuD5VseugWRtpN7Rg&callback=initMap')
+    script(src="./assets/js/about.js")
+    script(src="./assets/js/flexibility.js")
+
+                        
+                       
+                            
+                                
+                        
+
+
+                    
+                  
+
+        

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/foundation.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="./assets/js/foundation.js" defer></script>
+    <script src="./assets/js/app.js" defer></script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+</html>
+<body>
+  <div class="wrapper wrapper-blog visually-hidden">
+    <div class="preloader" id="page-preloader">
+      <div class="loader"></div><span class="loader-percentage" id="load-perc" <="" span="">0%</span>
+    </div>
+    <section class="section blog">
+      <div class="background-blog"></div>
+      <div class="landscape">
+        <div class="filter"></div>
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="socials socials--blog">
+        <ul class="socials__list">
+          <li class="socials__item"><a class="socials__link" href="https://www.facebook.com/pavel.dzem" target="_blank">
+              <svg class="socials__icon">
+                <use xlink:href="./assets/img/sprite.svg#fb"></use>
+              </svg></a></li>
+          <li class="socials__item"><a class="socials__link" href="https://github.com/Paveldub" target="_blank">
+              <svg class="socials__icon">
+                <use xlink:href="./assets/img/sprite.svg#github"></use>
+              </svg></a></li>
+          <li class="socials__item"><a class="socials__link" href="https://www.linkedin.com/in/pavel-dzemidovich/" target="_blank">
+              <svg class="socials__icon">
+                <use xlink:href="./assets/img/sprite.svg#in"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+      <div class="burger-menu" id="toggle"><span class="burger-menu__item burger-menu__item--top"></span><span class="burger-menu__item burger-menu__item--middle"></span><span class="burger-menu__item burger-menu__item--bottom"></span></div>
+      <div class="portfolio-img portfolio-img--bottom">
+        <svg class="portfolio-pic portfolio-pic--bottom">
+          <use xlink:href="./assets/img/sprite.svg#blog_header"></use>
+        </svg>
+      </div>
+      <div class="form-about__img form-about--position-blog"><img class="form-about__pic" src="./assets/img/my-photo.jpg" alt="photo"/>
+        <div class="form-about__desc form-about--size">
+          <h2>blog</h2>
+          <h5>My articles</h5>
+        </div>
+      </div>
+      <div class="triangle-blog">
+        <svg class="triangle__svg triangle__svg--color" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+          <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+          <polygon class="right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+        </svg>
+      </div>
+      <div class="arrow-down arrow-down--"><a class="arrow-down__link" href="#anchor">
+          <svg class="arrow-down__pic arrow-down__pic--undefined">
+            <use xlink:href="./assets/img/sprite.svg#arrow_down"></use>
+          </svg></a></div>
+    </section>
+    <section class="articles" id="anchor">
+      <aside class="articles__sidebar">
+        <div class="anchors">
+          <ul class="anchors__list">
+            <li class="anchors__items"><a class="anchors__link" href="#article1">Самое важное в SASS</a></li>
+            <li class="anchors__items"><a class="anchors__link" href="#article2">Приёмы в вёрстке, без которых <br> не обходится ни один сайт</a></li>
+            <li class="anchors__items"><a class="anchors__link" href="#article3">Самый необходимый набор Gulp <br> плагинов</a></li>
+            <li class="anchors__items"><a class="anchors__link" href="#article4">Почему я выбрал Pug</a></li>
+          </ul>
+          <div class="anchors__button"></div>
+        </div>
+      </aside>
+      <div class="articles__blog">
+        <article class="article__text" id="article1">
+          <div class="article__title">
+            <h2>Самое важное в SASS</h2>
+          </div>
+          <time class="article__date"> 
+            <h5>03.01.2017</h5>
+          </time>
+          <div class="article__texts">
+            <p>
+                Таким образом начало повседневной работы по формированию позиции позволяет <br>
+              выполнять важные задания по разработке направлений прогрессивного развития. <br>
+              Разнообразный и богатый опыт новая модель организационной деятельности играет <br>
+              важную роль в формировании новых предложений. Товарищи! новая модель <br>
+              организационной деятельности играет важную роль в формировании систем массового <br>
+              участия. <br>
+            </p>
+            <p>
+              Не следует, однако забывать, что укрепление и развитие структуры обеспечивает <br>
+              широкому кругу (специалистов) участие в формировании систем массового участия. <br>
+              Идейные соображения высшего порядка, а также рамки и место обучения кадров <br>
+              обеспечивает широкому кругу (специалистов) участие в формировании позиций, <br>
+              занимаемых участниками в отношении поставленных задач. Товарищи! постоянный <br>
+              количественный рост и сфера нашей активности способствует подготовки и реализации <br>
+              модели развития. С другой стороны рамки и место обучения кадров влечет за собой <br>
+              процесс внедрения и модернизации системы обучения кадров, соответствует <br>
+              насущным потребностям.
+            </p>
+            <pre class="line-numbers"> <code class="language-js">// присвоить
+    $(document).data('prop', {anything: "Любой объект"})
+
+// прочитать
+    alert( $(document).data('prop').anything ) // любой объект</code></pre>
+          </div>
+        </article>
+        <article class="article__text" id="article2">
+          <div class="article__title article__title--margin">
+            <h2>Приёмы в вёрстке, без которых не обходится ни один сайт</h2>
+          </div>
+          <time class="article__date"> 
+            <h5>13.09.2017</h5>
+          </time>
+          <div class="article__texts">
+            <p>
+                Таким образом начало повседневной работы по формированию позиции позволяет <br>
+              выполнять важные задания по разработке направлений прогрессивного развития. <br>
+              Разнообразный и богатый опыт новая модель организационной деятельности играет <br>
+              важную роль в формировании новых предложений. Товарищи! новая модель <br>
+              организационной деятельности играет важную роль в формировании систем массового <br>
+              участия. <br><br>
+            </p>
+            <p>
+              Не следует, однако забывать, что укрепление и развитие структуры обеспечивает <br>
+              широкому кругу (специалистов) участие в формировании систем массового участия. <br>
+              Идейные соображения высшего порядка, а также рамки и место обучения кадров <br>
+              обеспечивает широкому кругу (специалистов) участие в формировании позиций, <br>
+              занимаемых участниками в отношении поставленных задач. Товарищи! постоянный <br>
+              количественный рост и сфера нашей активности способствует подготовки и реализации <br>
+              модели развития. С другой стороны рамки и место обучения кадров влечет за собой <br>
+              процесс внедрения и модернизации системы обучения кадров, соответствует <br>
+              насущным потребностям.
+            </p>
+          </div>
+        </article>
+        <article class="article__text" id="article3">
+          <div class="article__title article__title--margin">
+            <h2>Самый необходимый набор Gulp плагинов</h2>
+          </div>
+          <time class="article__date"> 
+            <h5>13.09.2017</h5>
+          </time>
+          <div class="article__texts">
+            <p>
+                У веб-разработчиков есть прекрасный инструмент для автоматизации массы задач, <br>
+              который называется Gulp. И моя страсть к таксономии заставила себя собрать огромную <br>
+              коллекцию почти из 100 ценных плагинов для этого сборщика.
+              Думаю многие кто уже <br> 
+              использует Gulp найдут для себя что-то нужное, а кто нет, глядя
+              на возможности,<br>
+              получит хорошую мотивацию установить его и понять как эта штука работает. <br>
+            </p>
+            <p>
+              autoprefixer — один из самых полезных плагинов, который автоматически расставляет <br>
+              префиксы к CSS
+              свойствам, исходя из статистики caniuse. Важно сказать, что Автопрефиксер<br>
+              это лишь один из множества 
+              дополнений в рамках проекта PostCSS от Злых Марсиан. <br>
+              gulp-browser-sync — вероятно, самый нужный инструмент, с точки зрения повышения<br>
+              продуктивности веб-разработчиков.<br>
+              BrowserSync создает подключение, после чего производит автообновление страницы во всех браузерах на всех устройствах 
+              при изменениями не только клиентских или даже серверных<br>
+              файлов. А плюс ко всему синхронизирует позицию скроллинга и <br>
+              заполненные данные в формах. <br>
+              gulp-useref — парсит специфичные блоки и конкатенирует описанные в них стили и скрипты. <br>
+            </p>
+          </div>
+        </article>
+        <article class="article__text" id="article4">
+          <div class="article__title article__title--margin">
+            <h2>Почему я выбрал PUG</h2>
+          </div>
+          <time class="article__date"> 
+            <h5>13.12.2017</h5>
+          </time>
+          <div class="article__texts">
+            <p>
+                «Рутина» — так можно назвать основную часть деятельности современного фронтендщика. Мы собираем спрайты и SVG-иконки, оптимизируем графику, конкатенируем и минифицируем стили и скрипты и т.п.
+              Работа, скажем так, совсем не радующая креативную душу разработчика.
+              Просиживая долгие часы, пытаясь качественно сделать свою работу, я старался найти способ ускорить исполнение. При этом чтобы качество не пострадало.
+              Долго ведь не значит хорошо. Мне хотелось писать код максимально эффективно. И помочь себе и своим коллегам максимально оптимизировать верстку.
+              Несколько лет размышлений и поисков даром не прошли. Представляю Вам инструмент gulp-front. который имеет высокую степень настраиваемости. С его помощью решается большинство задач, стоящих перед фронтендщиком.
+              Основная функция gulp-front — работа с версткой. Однако его можно использовать также и для разработки на JavaScript.
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="overlay" id="overlay">
+        <div class="nav nav--overlay">
+          <ul class="overlay__list">
+            <li class="overlay__item"><a class="overlay__link" href="about.html">About</a></li>
+            <li class="overlay__item"><a class="overlay__link" href="my-works.html">My works</a></li>
+            <li class="overlay__item"><a class="overlay__link" href="blog.html">Blog</a></li>
+            <li class="overlay__item"><a class="overlay__link" href="index.html">Main page</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__rowup">
+        <div class="footer__firstsection">
+          <div class="footer__adv">
+            <p>
+              Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
+          </div>
+        </div>
+        <div class="footer__secondsection">
+          <div class="nav nav--footer">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="about.html">About</a></li>
+              <li class="footer__item"><a class="footer__link" href="my-works.html">My works</a></li>
+              <li class="footer__item"><a class="footer__link" href="blog.html">Blog</a></li>
+              <li class="footer__item"><a class="footer__link" href="index.html">Main page</a></li>
+            </ul>
+          </div>
+          <div class="socials socials--footer">
+            <ul class="socials__list">
+              <li class="socials__item"><a class="socials__link" href="https://www.facebook.com/pavel.dzem" target="_blank">
+                  <svg class="socials__icon">
+                    <use xlink:href="./assets/img/sprite.svg#fb"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="https://github.com/Paveldub" target="_blank">
+                  <svg class="socials__icon">
+                    <use xlink:href="./assets/img/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="https://www.linkedin.com/in/pavel-dzemidovich/" target="_blank">
+                  <svg class="socials__icon">
+                    <use xlink:href="./assets/img/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__thirdsection">
+          <div class="footer__quote">
+            <p>
+              Always code as if the guy who ends upmaintaining your code will be a violent
+              psychopath who knows where you live.<br>
+            </p>
+            <h5> &mdash; Martin Golding</h5>
+          </div>
+        </div>
+      </div>
+      <div class="footer__rowdown">
+        <h2>&copy; Pavel Demidovich</h2>
+      </div>
+    </footer>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="./assets/js/flexibility.js">          </script>
+  <script src="./assets/js/blog.js"></script>
+</body>

@@ -1,0 +1,204 @@
+mixin nav(className, items, activeItem) 
+    div(class=`nav nav--${className}`)
+        ul(class=`${className}__list`)
+            each item, ndx in nav
+                li(class=`${className}__item` + (( ndx === activeItem ) ? ` ${className}__item--active` : '' ))
+                    a(class=`${className}__link` href=`${item.link}.html`)= `${item.text}`
+- 
+    var nav = [
+        {
+            link: 'about',
+            text: 'About'
+        },{
+            link: 'my-works',
+            text: 'My works'
+        },{
+            link: 'blog',
+            text: 'Blog'
+        },{
+            link: 'index',
+            text: 'Main page'
+        }
+    ]
+
+mixin herocenter(className, titleText, descTitle, textSize)
+    div(class=`form-about__img form-about--${className}`)
+        img.form-about__pic(src="./assets/img/my-photo.jpg" alt="photo")
+        div(class=`form-about__desc form-about--${textSize}`)
+            h2 #{titleText}
+            h5 #{descTitle}
+
+mixin triangle(className)
+    svg(class=`triangle__svg triangle__svg--${className}` xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+        polygon.left(points='0,0   0,86   500.8,86   500.8,75.5')
+        polygon.right(points='1000,0   1000,86   500,86   500,75.5')
+
+mixin background(className, img)
+    div(class=`portfolio-img portfolio-img--${className}`)
+        svg(class=`portfolio-pic portfolio-pic--${className}`)
+            use(xlink:href=`./assets/img/sprite.svg#${img}`)
+
+mixin socials(className, item)
+    div(class=`socials socials--${className}`)
+        ul.socials__list
+            each item in socials 
+                li.socials__item
+                    a.socials__link(href=`${item.link}` target="_blank")
+                        svg.socials__icon
+                            use(xlink:href=`./assets/img/sprite.svg#${item.img}`)
+-
+    var socials = [
+        {
+            link: 'https://www.facebook.com/pavel.dzem',
+            img: 'fb'
+        },{
+            link: 'https://github.com/Paveldub',
+            img: 'github'
+        },{
+            link: 'https://www.linkedin.com/in/pavel-dzemidovich/',
+            img: 'in'
+        }
+    ]
+
+mixin buttons(className, items, link) 
+    .buttons
+        ul(class=`${className}__list`)
+            each item in buttons
+                li(class=`${className}__item`)
+                    a(class=`${className}__link` href=`${item.link}.html`)= `${item.text}`
+    
+-
+    var buttons = [
+        {
+            link: 'my-works',
+            text: 'My works'
+        },{
+            link: 'about',
+            text: 'About'
+        },{
+            link: 'blog',
+            text: 'Blog'
+        }
+    ]
+
+mixin title(titleName, className, size, titleImg, margin, titleText)
+    div(class=`title title--${titleName}`)
+        div(class=`title-about__img title-about__img--${className}`)
+            svg(class=`title-about__pic title-about__pic--${className}`)
+                use(xlink:href=`./assets/img/sprite.svg#${titleImg}`)
+        .title-about__text
+            h2 #{titleText}
+
+mixin title-small(className, titleText)
+    div(class=`${className}`)
+        h3 #{titleText}
+
+mixin arrow(className, link, position)
+    div(class=`arrow-down arrow-down--${className}`)
+        a.arrow-down__link(href=`${link}`)
+            svg(class=`arrow-down__pic arrow-down__pic--${position}`)
+                use(xlink:href="./assets/img/sprite.svg#arrow_down")
+
+mixin title-rumorous(className, titleText, clear, titleImg)
+    div(class=`title-rumorous title-rumorous--${className}`)
+        h3 #{titleText}
+        div(class=`title-rumorous__pic title-rumorous__pic--${clear}`)
+            svg.title-rumorous__svg
+                use(xlink:href=`./assets/img/sprite.svg#${titleImg}`)
+
+mixin buttonsForm(className, items, link, type) 
+    div(class=`buttons__${className}`)
+        ul(class=`${className}__list`)
+            each item in formbuttons
+                li(class=`${className}__item`)
+                    button(class=`${className}__form` type=`${item.type}` id="load")= `${item.text}`
+    
+-
+    var formbuttons = [
+        {
+            link: '#',
+            text: 'Send',
+            type: 'submit'
+        },{
+            link: '#',
+            text: 'Clear',
+            type: 'clear'
+        }
+    ]
+    
+
+                    
+    
+
+
+- 
+    var contacts = [
+        {
+        img: 'skype',
+        text: 'paveldub',
+        link: 'skype:assgore'
+        },{
+        img: 'envelope2',
+        text: 'dubstr1@gmail.com',
+        link: 'email:dubstr1@gmail.com'
+        },{
+        img: 'phone2',
+        text: '+375 44 721-11-10',
+        link: 'tel:+375447211110'
+        },{
+        img: 'map_marker',
+        text: 'Minsk, Kamennogorskaya st.28'
+        }
+    ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+    
+    
+ 
+
+                        
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+
+                

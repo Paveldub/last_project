@@ -1,0 +1,17 @@
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.container {
+	width: 95%;
+	margin: 0 auto;
+	height: 100vh;
+	min-height: 100%;
+	flex-direction: column;
+}
+
+
+
