@@ -40,7 +40,6 @@ $.gulp.task('default', $.gulp.series(
     'copy:js',
     'copy:webGl',
     'js:foundation',
-    'js:process',    
     'copy:image',
     'copy:font',
     'css:foundation'
@@ -59,7 +58,6 @@ $.gulp.task('build', $.gulp.series(
     'copy:js',
     'copy:webGl',
     'js:foundation',
-    'js:process',    
     'copy:image',
     'copy:font',
     'css:foundation'
