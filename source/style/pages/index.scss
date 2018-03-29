@@ -1,318 +1,75 @@
-                .index {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    width: 100%;
-                    height: 100%;
-                }
+.datepicker {
+  width: 100%;
+  height: 100%;
 
-                //parallax
-                #parallax {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 110%;
-                    overflow: hidden;
-                  }
-                  
-                  .parallax__layer {
-                    height: 100%;
-                    width: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    will-change: transform; // переносит работу с процессора на видеокарту
-                  }
-                  
-                  .parallax-img {
-                        position: absolute;
-                        bottom: 0;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        min-width: 100%;
-                        max-height: 100%;
-                  }
+  &__heading {
+    h1,
+    h2,
+    h3 {
+      @include LifehackSans();
+      @include flex();
+      font-size: 40px;
+    }
+  }
+}
 
-                // preloader
-                .preloader {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: url('../img/forest_prel_bg.jpg');
-                    z-index: 3;
-                    transition: 1s all;
-                    opacity: 1;
-                    
-                    .loader {
-                        width: 110px;
-                        height: 110px;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        text-align: center;
-                        border: 20px solid rgba(#dfdcd5, .87);
-                        border-radius: 50%;
-                        border-top-color: #74a163;
-                        animation: 1s spin infinite linear;
-                    }
-                    @keyframes spin {
-                        from {
-                            transform: translate(-50%, -50%) rotate(0deg);
-                        } to {
-                            transform: translate(-50%, -50%) rotate(360deg);
-                        }
-                    }
-                    &.done {
-                        opacity: 0;
-                        visibility: hidden;
-                    }
-                }
+.datepicker__general {
+  display: flex;
+  padding-top: 70px;
+}
 
-                .loader-percentage {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    color: #fff;
-                    @include roboto();
-                    font-weight: 900;
-                }
+.datepicker__left {
+  width: 50%;
+  @include flex();
+  flex-direction: column;
+}
 
-            
-                .Background {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5));
-                    }
-                }
+.datepicker__left-title {
+  h4 {
+    @include UbuntuBold();
+    font-size: 20px;
+  }
+}
 
-                .form-about {
-                    width: rem(380px);
-                    height: rem(395px);
-                    background: rgba(18, 38, 32, .6);
-                    border-radius: rem(5px);
-                }
+.datepicker__right {
+  width: 50%;
+  @include flex();
+  flex-direction: column;
+}
 
-                .authorisation-button {
-                    @include phones {
-                        position: absolute;
-                        top: 15%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                    }
-                    border-width: rem(1px);
-                    border-color: rgb(255, 255, 255);
-                    border-style: solid;
-                    width: rem(138px);
-                    padding: rem(15px) rem(30px);
-                    border-radius: rem(30px);
-                    display: flex;
-                    justify-content: center;
-                    transition: .4s;
-                    position: absolute;
-                    top: 3%;
-                    right: 4%;
-                    &:hover {
-                        transition: .4s;
-                        background: rgba(#4e8839, .5);
-                    }
+.datepicker__right-title {
+  h4 {
+    @include UbuntuBold();
+    font-size: 20px;
+  }
+}
 
-                    @include iphone-4 {
-                        top: 10%;
-                    }
-                }
+.datepicker__left-list {
+  display: flex;
+}
 
-                .hidden {
-                    display: none;
-                }
+.datepicker__left-item {
+  padding: 20px;
+  @include UbuntuBold();
+  font-size: 15px;
+  text-transform: uppercase;
 
-                .authorisation-button__link {
-                    text-decoration: none;
-                    color: #fff;
-                    @include roboto-medium();
-                    font-size: rem(16px);
-                }
+  &--color {
+    color: $red;
+  }
+}
 
-                .form-about__hero {
-                    display: flex;
-                    justify-content: center;
-                    padding-top: rem(30px);
-                    padding-bottom: rem(25px);
-                }
+.datepicker__right-list {
+  display: flex;
+}
 
-                .form-about__pic {
-                    @include circle(rem(140px), rem(140px));
-                    margin-bottom: rem(30px);
-                }
+.datepicker__right-item {
+  padding: 20px;
+  @include UbuntuBold();
+  font-size: 15px;
+  text-transform: uppercase;
 
-                .form-about__img {
-                    display: flex;
-                    justify-content: center;
-                    flex-direction: column;
-                    align-items: center;
-                    &.form-about--padding {
-                        padding-top: rem(55px);
-                    }
-                }
-
-                .form-about__desc {
-                    display: flex;
-                    justify-content: center;
-                    flex-direction: column;
-                    align-items: center;
-                    padding-bottom: 20px;
-                    h2 {
-                        @include custom {
-                            width: 100%;
-                            text-align: center;
-                        }
-                        @include roboto-medium();
-                        font-size: rem(28px);
-                        color: #fff;
-                    }
-                    h5 {
-                        @include roboto();
-                        font-size: rem(16px);
-                        color: #fff;
-                    }
-                }
-
-                .navigation-items {
-                    display: flex;
-                    justify-content: center;
-                    padding-bottom: 2.16875rem;
-                }
-
-                .socials__list {
-                    display: flex;
-                }
-
-                .socials__icon {
-                    width: rem(25px);
-                    height: rem(25px);
-                    fill: rgba(151, 166, 156, .5);
-                    transition: .4s;
-                    &:hover {
-                        transition: .4s;
-                        fill: #4e8839;
-                    }
-                }
-
-                .socials__item {
-                    padding-right: rem(20px);
-                    &:last-child {
-                        padding-right: 0;
-                    }
-                } // button
-                .buttons__list {
-                    display: flex;
-                }
-
-                .buttons__item {
-                    border-right: rem(2px) solid $clightgray;
-                    transition: .4s;
-                    display: flex;
-                    width: 100%;
-                    justify-content: center;
-                    align-items: center;
-                    &:last-child {
-                        border-right: 0;
-                    }
-                    &:hover {
-                        transition: .4s;
-                        background: $cgreen;
-                        border-bottom-right-radius: rem(5px);
-                        border-bottom-left-radius: rem(5px);
-                    }
-                    &:nth-child(1) {
-                        width: rem(154px);
-                    }
-                    &:nth-child(2) {
-                        width: rem(125px);
-                    }
-                    &:nth-child(3) {
-                        width: rem(102px);
-                    }
-                }
-
-                .buttons__list {
-                    background: $lightgreen;
-                    height: rem(45px);
-                    border-bottom-right-radius: rem(5px);
-                    border-bottom-left-radius: rem(5px);
-                }
-
-                .buttons__link {
-                    @include roboto-medium();
-                    font-size: rem(16px);
-                    color: #fff;
-                    text-decoration: none;
-                    &:hover {
-                        text-decoration-line: underline;
-                    }
-                } // copyright
-                .copyright {
-                    @include phones {
-                        width: 100%;
-                        text-align: center;
-                    }
-                    bottom: 0;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    position: absolute;
-                    &.copyright p {
-                        @include roboto();
-                        font-size: rem(16px);
-                        color: #fff;
-                    }
-                } // flipper 
-                .flip-container {
-                    width: rem(380px);
-                    height: rem(395px);
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    perspective: rem(1800px);
-                }
-
-                .flipper {
-                    transition: transform 1s;
-                    transform-style: preserve-3d;
-                    height: 100%;
-                    &.flipper--active {
-                        transform: rotateY(180deg);
-                    }
-                }
-
-                .front {
-                    z-index: 2;
-                }
-
-                .front,
-                .back {
-                    backface-visibility: hidden;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-
-                .back {
-                    transform: rotateY(180deg);
-                    backface-visibility: hidden;
-                }
+  &--color {
+    color: $red;
+  }
+}

@@ -12,12 +12,12 @@
 // module.func1();
 // module.func2();
 
-import { square, MyClass } from './module';
+// import { square, MyClass } from './module';
 
-console.log(square(5));
+// console.log(square(5));
 var cred = {
   name: 'Done!',
   enrollmentNo: 11115078
 };
-var x = new MyClass(cred);
-console.log(x.getName());
+// var x = new MyClass(cred);
+// console.log(x.getName());

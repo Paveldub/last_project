@@ -1,47 +1,29 @@
 // fonts
-@mixin roboto {
-  font-family: 'roboto';
+@mixin ALS {
+  font-family: 'als';
 }
 
-@mixin sansus {
-  font-family: 'sansus-webissimo';
+@mixin Ubuntu {
+  font-family: 'Ubuntu';
 }
 
-@mixin fontawesome {
-  font-family: 'fontawesome';
+@mixin LifehackSans {
+  font-family: 'LifehackSans';
 }
 
-@mixin roboto-bold {
-  font-family: 'roboto-bold';
+@mixin Lifehack-Sans {
+  font-family: 'Lifehack-Sans';
 }
 
-@mixin roboto-bolditalic {
-  font-family: 'roboto-bolditalic';
+@mixin LifehackBasic {
+  font-family: 'LifehackBasic';
 }
 
-@mixin roboto-italic {
-  font-family: 'roboto-italic';
+@mixin UbuntuBold {
+  font-family: 'UbuntuBold';
 }
 
-@mixin roboto-light {
-  font-family: 'roboto-light';
-}
 
-@mixin roboto-lightitalic {
-  font-family: 'roboto-lightitalic';
-}
-
-@mixin roboto-medium {
-  font-family: 'roboto-medium';
-}
-
-@mixin roboto-mediumitalic {
-  font-family: 'roboto-mediumitalic';
-}
-
-@mixin roboto-regular {
-  font-family: 'roboto-regular';
-}
 
 // figures
 @mixin circle($width, $color) {
@@ -222,8 +204,6 @@
   }
 }
 
-
-
 // nexus
 @mixin nexusS-5 {
   @media screen and (max-width: 360px) {
@@ -251,15 +231,7 @@
   }
 }
 
-// mixin overrided
-@mixin overrided {
-  position: absolute;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  max-width: 100%;
-  margin-bottom: 50%;
-}
-
+// mixin flex
 @mixin flex {
   display: flex;
   justify-content: center;

@@ -4,31 +4,62 @@ block variables
     - var title = "Main page"
 
 block content
-    .preloader#page-preloader
-        .loader
-        span#load-perc.loader-percentage(<='', span='') 0%
-    .wrapper.visually-hidden
-        .parallax#parallax.visually-hidden
-            - for(i=1; i < 10; i++)
-                .parallax__layer
-                    img(src=`./assets/img/layer-${i}.png`).parallax-img
-        include ../layout/index/sign_up
-        .flip-container
-            .flipper#flipper
-                .front
-                    .form-about
-                        +herocenter('padding', 'Pavel Demidovich', 'Personal website')
-                        .navigation-items
-                             +socials
-                        .navigation-buttons
-                            +buttons('buttons', ["My works", "About me", "Blog"])
-                .back
-                    include ../layout/login/login
-        .copyright
-            p &copy; Pavel Demidovich | 2018
+    .wrapper
+        .container
+            .datepicker
+                .datepicker__heading
+                    h1 Calculate the cost of your tour
+                    h2 Cound Days: 5
+                    h3 Date: 16/05/2018
+                .datepicker__general
+                    .datepicker__left
+                        .datepicker__left-title
+                            h4 May 2018
+                        .datepicker__left-date    
+                            ul.datepicker__left-list
+                                li.datepicker__left-item
+                                    | mo
+                                li.datepicker__left-item
+                                    | tu   
+                                li.datepicker__left-item
+                                    | we
+                                li.datepicker__left-item
+                                    | th
+                                li.datepicker__left-item
+                                    | fr
+                                li.datepicker__left-item.datepicker__left-item--color
+                                    | sa
+                                li.datepicker__left-item.datepicker__left-item--color
+                                    | su  
+                        .datepicker__left-calendar
+                            .datepicker
+                    .datepicker__right
+                        .datepicker__right-title
+                            h4 June 2018
+                        .datepicker__right-date    
+                            ul.datepicker__right-list
+                                li.datepicker__right-item
+                                    | mo
+                                li.datepicker__right-item
+                                    | tu   
+                                li.datepicker__right-item
+                                    | we
+                                li.datepicker__right-item
+                                    | th
+                                li.datepicker__right-item
+                                    | fr
+                                li.datepicker__right-item.datepicker__right-item--color
+                                    | sa
+                                li.datepicker__right-item.datepicker__right-item--color
+                                    | su      
+                        .datepicker__right-calendar
+                            .datepicker.calendar(data-count-day='5', data-min-date='2018-02-20', data-available-day='1,3,5,6,7')
 
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
-    script(src="./assets/js/flexibility.js")
+    script.
+        jQuery( function() {
+        jQuery( ".Datepicker" ).Datepicker();
+        } );
     script(src="./assets/js/index.js")  
-    script(src="./assets/js/parallax.js")  
+    
+
          

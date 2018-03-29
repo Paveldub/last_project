@@ -16,15 +16,6 @@ body {
 
 html {
 	font-size: 16px;
-	@include tablets { 
-		font-size: 15px;
-	}
-	@include phones {
-		font-size: 14px;
-	}
-	@include iphone {
-		font-size: 13px;
-	}
 }
 
 input {

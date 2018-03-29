@@ -1,4 +1,4 @@
-include ./common/_mixins
+
 block variables
 
 doctype html
@@ -17,12 +17,10 @@ html
     //- favicon block end
     link(rel="stylesheet" href="./assets/css/foundation%=suffix=%.css%=version=%")
     link(rel="stylesheet" href="./assets/css/app%=suffix=%.css%=version=%")
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism.min.css")
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.min.css")
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
+    link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
 
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/prism.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.min.js")
     script(src="./assets/js/foundation%=suffix=%.js%=version=%" defer)
     script(src="./assets/js/app%=suffix=%.js%=version=%" defer)
     
